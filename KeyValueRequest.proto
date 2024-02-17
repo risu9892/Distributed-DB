@@ -1,0 +1,13 @@
+option java_package = "ca.NetSysLab.ProtocolBuffers";
+option java_outer_classname = "KeyValueRequest";
+
+message KVRequest {
+    required uint32 command = 1;
+    optional bytes key = 2;
+    optional bytes value = 3;
+    optional int32 version = 4;
+    optional string reply_ip_address = 5;
+    optional int32 reply_port = 6;
+    optional bool is_replica = 7;
+    repeated uint32 vector_clock = 8;
+}
